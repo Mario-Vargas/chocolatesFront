@@ -1,0 +1,11 @@
+<div *ngIf="isResultLoaded; else loading">
+    <div class="d-flex justify-content-center flex-wrap">
+        <button *ngFor="let categoria of listaCategorias" class="btn btn-primary btn-sm m-1">
+            {{ categoria.nombre }}
+        </button>
+    </div>
+</div>
+
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>

@@ -1,0 +1,16 @@
+
+<app-categorias></app-categorias>
+<div class="container mt-5">
+    <div class="row">
+        <div *ngFor="let chocolate of listaChocolates" class="col-md-4 mb-4">
+            <div class="card">
+                <img [src]="'img/' + chocolate.imagen" class="card-img-top" alt="{{chocolate.nombre}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ chocolate.nombre }}</h5>
+                    <p class="card-text">{{ chocolate.descripcion }}</p>
+                    <p class="card-text"><strong>Precio: {{ chocolate.precio | currency }}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
